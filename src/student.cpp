@@ -248,7 +248,7 @@ bool hapus(Node*& root, int nilai) {
     }else{
         //if child free
         if(root->left == nullptr && root->right== nullptr){
-            Node* target = nullptr;//temp variables
+            Node* target = root;//temp variables
             root=nullptr;// putusin dari parentnya
             delete target;
             return true;
