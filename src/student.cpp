@@ -239,6 +239,7 @@ bool hapus(Node*& root, int nilai) {
      if(root== nullptr){
         return false;
     }
+
     if(nilai <root->data){
         //menghapus lebih kecil
         return hapus(root->left,nilai);
@@ -246,7 +247,7 @@ bool hapus(Node*& root, int nilai) {
         return hapus(root->right,nilai);
     }else{
         //if child free
-        if(root->left == 0 && root->right== nullptr){
+        if(root->left == nullptr && root->right== nullptr){
             Node* target = nullptr;//temp variables
             root=nullptr;// putusin dari parentnya
             delete target;
